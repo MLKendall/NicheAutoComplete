@@ -7,7 +7,7 @@
   HTML, CSS, jQuery, Handlebars.js
   
  ### Switching Themes
- Themes can be swtiched utilizing the button in the top right corner of the page
+ Themes can be switched utilizing the button in the top right corner of the page
  All files are contained in the master branch
  
  ### Compatibility
