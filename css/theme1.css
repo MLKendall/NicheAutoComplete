@@ -1,0 +1,190 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #696969;
+    background-color:#000000;
+    background-image: url(../images/skyline-304802-B.png), -webkit-linear-gradient(#4568DC, #B06AB3);
+    background-image: url(../images/skyline-304802-B.png), linear-gradient(#4568DC, #B06AB3);
+    background-position: bottom center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font: 16px 'Source Sans Pro', sans-serif;
+}
+
+header {
+    width: 400px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#changeTheme{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 75px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: .5em;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.wrapper {
+    width: 75vw;
+    height: 100vh;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.search {
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: inherit;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: inherit;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: inherit;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: inherit;
+}
+
+#response {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#response>ul {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#response>ul>li {
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-top: none;
+}
+
+li:hover {
+    color: white;
+    background-color: #A9A9A9;
+}
+
+span.name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+span.location {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#userErrorMessage {
+    display: none;
+    width: 90%;
+    min-height: 40px;
+    margin: 0 auto;
+    padding: 15px;
+    color: crimson;
+    background-color: white;
+    font-size: .85em;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/*Media Queries*/
+
+@media (max-width:991px) {
+    body {
+        background-image: url(../images/skyline-304802.png), -webkit-linear-gradient(#4568DC, #B06AB3);
+        background-image: url(../images/skyline-304802.png), linear-gradient(#4568DC, #B06AB3);
+    }
+    .search {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        width: 100vw;
+    }
+    .search {
+        width: 100%;
+        max-width: 400px;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 479px) {
+    header {
+        width: 80%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Autocomplete - Niche Recruiting Reviews - Niche</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+
+	<link href="https://cdn.jsdelivr.net/normalize/7.0.0/normalize.css" rel=stylesheet />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+	<link href="css/theme2.css" rel="stylesheet" id="cssRef"/>
+</head>
+
+<body>
+
+	<button id="changeTheme">Change Theme</button>
+
+	<div class="wrapper">
+
+		<header>
+			<h1>Find Your Niche</h1>
+			<h2>Discover the schools and neighborhoods that are right for you.</h2>
+		</header>
+
+		<div class="search">
+			<input type="text" placeholder="Enter a City or School Name..." id="userInput" />
+
+			<div id="userErrorMessage"><span></span></div>
+
+			<div id="response">
+				<ul>
+
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<script type="text/javascript" src="js/JSONPUtil.js"></script>
+	<script type="text/javascript" src="js/loadExampleSearch.js"></script>
+	<script type="text/javascript" src="js/changeCSS.js"></script>
+
+	<script type="text/template" id="responseListTemplate">
+		{{#each this}}
+		<li>
+			<a href="{{url}}"><span class="name">{{this.name}}</span> <span class="location">{{this.location}}</span></a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script type="text/template" id="errorMessage">
+
+	</script>
+
+</body>
+
+</html>
